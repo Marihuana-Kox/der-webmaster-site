@@ -145,16 +145,18 @@
                     <span></span>
                     <span></span>
                 </div>
-                <input type="text" name="capcha" placeholder="12 + 7 = ?">
-                <input type="text" name="name" placeholder="Ваше Имя">
-                <input type="text" name="email" placeholder="Ваш Email">
+            <form id="besthellen_form">
+                <input type="text" name="capcha" placeholder="12 + 7 = ?" required>
+                <input type="text" name="name" placeholder="Ваше Имя" required>
+                <input type="text" name="email" placeholder="Ваш Email" required>
                 <select name="select_produkt">
                     <option name="site" id="1">Landing Page</option>
                     <option name="site" id="2">Vsit Page</option>
                     <option name="site" id="3">Corporation Site</option>
                 </select>
-                <textarea name="brife" placeholder="Здесь напишите ваше т.з."></textarea>
-                <button id="popap_zakaz">Заказать</button>
+                <textarea id="brife" name="brife" placeholder="Здесь напишите ваше т.з." required></textarea>
+                <button type="submit" id="popap_zakaz">Заказать</button>
+            </form>
             </div>
         </div>
     </section>
