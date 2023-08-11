@@ -1,0 +1,402 @@
+@import config
+@import media
+@import fonts
+
+body 
+	margin: 0
+	color: var(--darkblue-title)
+
+header 
+	background-image: url('/images/src/wave.png'), url('/images/src/main-fone-1-px.jpg')
+	background-position: top right, top right
+	background-size: 76vw, 100vw
+	background-repeat: no-repeat, no-repeat, repeat
+	min-height: 100vh
+.parallax_layer
+	background-image: url('/images/src/mini-elements.png')
+	background-position: 100% 0
+	background-size: 100vw
+	background-repeat: repeat-y
+	height: 100vh
+
+section
+	padding-bottom: 100px
+h1 
+	font-size: 45px
+	font-weight: 800
+h2
+	font-size: 50px
+	font-weight: 800	
+h4
+	font-size: 25px
+	line-height: 1.5
+p
+	font-size: 25px
+	font-weight: 600
+	line-height: 1.6
+a 
+	text-decoration: none
+ul
+	list-style-type: none
+	margin-left: 0
+	padding-left: 0
+	li
+		margin: 10px 0
+		font-size: 1.3em
+		a
+			color: var(--darkblue-title)
+			font-weight: 600
+button
+	background-image: linear-gradient(var(--akcent-orange), rgba(245, 217, 197, .8))
+	width: 380px
+	height: 85px
+	border-radius: 45px
+	margin-left: 50px
+	border: none
+	box-shadow: 0 0 15px gray
+	font-size: 42px
+	color: var(--darkblue-title)
+	transition: all .3s ease
+button
+	&:hover
+		cursor: pointer
+		background-image: linear-gradient(var(--hover-akcent-orange), rgba(245, 217, 197, .8))
+		color: var(--hower-darkblue-title)
+		box-shadow: 0 0 25px gray
+strong
+	margin: 10px auto
+	color: var(--main-bg-color)
+	
+input,
+select,
+textarea
+	width: 100%
+	margin: 0 auto 20px
+	border-radius: 12px
+	background-color: var(--main-bg-color)
+	box-shadow: inset 2px 2px 6px var(--hidden-darkblue)
+	border: none
+	height: 30px
+	font-size: 18px
+	padding: 0 5px
+select
+	font-weight: 600
+	padding-left: 5px
+	&:last-child
+		padding-left: 0
+textarea
+	height: 150px
+.logo-title-social-icons
+	display: flex
+	margin-top: 20px
+.telegramm-block,
+.instagram-block
+	margin-left: 80px
+.menu-box
+	height: 60px
+	display: flex
+	justify-content: flex-end
+	margin-top: 40px
+	
+.button-menu-block
+	cursor: pointer
+	position: fixed
+	z-index: 10
+	width: 60px
+	height: 60px
+	border-radius: 12px
+	background-color: var(--main-bg-color)
+	box-shadow: 0 0 8px var(--hidden-darkblue)
+	span
+		transition: all .3s ease
+		position: relative
+		display: block
+		width: 45px
+		height: 6px
+		background-color: var(--darkblue-title)
+		margin: 11px auto 0
+		border-radius: 3px
+	&:hover
+		span
+			&:first-child
+				transform: rotate(100deg)
+				top: 18px
+				left: -16px
+			&:nth-child(2)
+				transform: rotate(-460deg)
+			&:last-child
+				transform: rotate(-100deg)
+				top: -18px
+				left: 16px
+				
+.button-menu-block-activ
+	display: none
+	cursor: pointer
+	position: fixed
+	z-index: 10
+	width: 60px
+	height: 60px
+	border-radius: 12px
+	background-color: var(--main-bg-color)
+	span
+		position: relative
+		display: block
+		width: 45px
+		height: 6px
+		background-color: var(--darkblue-title)
+		margin: 11px auto 0
+		border-radius: 3px
+		&:first-child
+			transform: rotate(145deg)
+			top: 18px
+			left: 0
+		&:nth-child(2)
+			display: none
+		&:last-child
+			transform: rotate(-145deg)
+			top: 0
+			left: 0
+
+.list-menu-box
+	top: -60%
+	z-index: 9
+	border-radius: 30px
+	padding: 20px
+	position: fixed
+	width: 20%
+	background-color: var(--main-bg-color)
+	box-shadow: 0 0 20px var(--darkblue-title)
+	border: 20px solid var(--light-darkblue-title)
+	li
+		transition: all .3s ease
+		padding: 5px 20px
+		border-bottom: 1px solid var(--main-bg-color)
+		&:hover
+			border-bottom: 1px solid var(--light-darkblue-title)
+
+.monitor-box
+	margin-top: 40px
+
+.offer-title,
+.offer-decription,
+.offer-button
+	margin-top: 60px
+	margin-right: 50px
+	
+//block_first
+.block_first
+	background-image: url('/images/src/eleps-left.png')
+	background-repeat: no-repeat
+	h2
+		margin-bottom: 60px
+.first__card_block
+	position: relative
+	background-image: url('/images/src/card-block-fone.png')
+	background-repeat: no-repeat
+	min-height: 583px
+	padding: 30px 0 0
+	margin-bottom: 100px
+	.title_card
+		font-size: 40px
+		text-align: center
+		color: var(--main-bg-color)
+		font-weight: 800
+		&::after
+			content: url('/images/src/Akcent.png')
+			position: relative
+			top: -20px
+			display: block
+				
+	.price_card
+		font-size: 50px
+		text-align: center
+		color: var(--akcent-orange)
+		font-weight: 800
+	.brief_card
+		font-size: 17px
+		color: var(--main-bg-color)
+		font-weight: 500
+		line-height: 1.6
+		margin: 50px 35px 0
+	.chekbox_card
+		position: absolute
+		bottom: 50px
+		left: calc( 50% - 20px )
+		.custom_checkbox
+			border-radius: 8px
+			cursor: pointer
+			box-shadow: inset 2px 2px 6px var(--akcent-orange)
+			width: 40px
+			height: 40px
+			position: relative
+			background-color: var(--main-bg-color)
+			.galka
+				opacity: 0
+				transition: all .3s ease
+				&::after
+					content: url('/images/src/galka.png')
+					position: relative
+					top: -26px
+					left: -8px
+
+.title_block_container
+	text-align: center
+	margin: auto
+	max-width: 1340px 
+	padding: 100px
+//block_zweiten
+.block_zweiten
+	background-color: var(--main-bg-color)
+	background-image: url('/images/src/eleps-right.png')
+	background-repeat: no-repeat
+	min-height: 100vh
+	.wrap_card_block_zweiten-right,
+	.wrap_card_block_zweiten-left
+		margin-bottom: 20px
+		padding: 15px 0 15px 15px
+		display: flex
+		background-image: url('/images/src/left-card.png')
+		background-repeat: no-repeat
+		background-size: cover
+		.card-text
+			padding: 30px
+			color: var(--main-bg-color)
+			min-height: 155px
+			p
+				font-size: 19px
+				font-weight: 400
+		.icon-card
+			display: flex
+			flex-direction: row
+			align-items: center
+			background-image: url('/images/src/halbe-elipse.png')
+			background-repeat: no-repeat
+			background-position: left
+			min-width: 120px
+			img
+				margin: auto
+	.wrap_card_block_zweiten-right
+		padding: 15px 15px 15px 0
+		background-image: url('/images/src/right-card.png')
+		background-position-x: right
+		.icon-card
+			background-image: url('/images/src/right-halbe-elipse.png')
+			background-position: right
+			min-width: 120px
+		.card-text
+			text-align: right
+//block_dritte
+.block_dritte
+	background-image: url('/images/src/eleps-left.png')
+	background-repeat: no-repeat
+	min-height: 100vh
+	.dritte_card_wrap
+		display: flex
+		margin-bottom: 50px
+		align-items: center
+	.drite_icon
+		min-width: 200px
+		img
+			width: 100%
+			object-fit: contain
+	.dritte_text
+		padding: 15px 20px
+//block_vierte
+.block_vierte
+	background-color:  var(--main-bg-color)
+	background-image: url('/images/src/eleps-right.png')
+	background-repeat: no-repeat
+	min-height: 100vh
+	.vierte_blck_wrapper
+		border-radius: 45px
+		border: 20px solid var(--light-darkblue-title)
+		overflow: hidden
+		max-height: 624px
+		img
+			width: 100%
+			object-fit: fill
+	.vierte_navigation
+		margin: 100px auto 0
+		display: flex
+		flex-direction: row
+		justify-content: center
+		.schape_nav
+			margin: 0 25px
+			width: 24px
+			height: 24px
+			border-radius: 15px
+			border: 3px solid var(--akcent-orange)
+			transition: all .3s ease
+			box-shadow: inset 1px 1px 5px var(--hower-darkblue-title)
+			&:hover
+				cursor: pointer
+				background-color: var(--akcent-orange)
+				box-shadow: 0 0 4px var(--hower-darkblue-title)
+//fotter
+.fotter
+	background-image: url('/images/src/footer-shape-main.png'), url('/images/src/footer-bg-main.png')
+	background-repeat: no-repeat, repeat
+	padding: 60px 0
+	.footer_block_wrapper
+		padding: 40px
+		display: flex
+		background-image: url('/images/src/footer-shape.png'), url('/images/src/footer-bg.png')
+		background-repeat: no-repeat, repeat
+		background-size: contain
+		background-position-x: right
+		border-radius: 40px
+		min-height: 550px
+		color: var(--main-bg-color)
+		.footer_form
+			width: 30%
+			background-color: var(--main-bg-color)
+			border-radius: 30px
+			text-align: center
+			padding: 30px 0
+			box-shadow: 0 0 15px var(--hower-darkblue-title)
+			input,
+			textarea,
+			select
+				width: 80%
+				background-color: var(--bluevawe-color)
+				border-radius: 20px
+				color: var(--main-bg-color)
+				padding-left: 14px
+				&::placeholder
+					color: var(--main-bg-color)
+			input,
+			select
+				height: 40px
+			button
+				width: 70%
+				margin-left: 0
+				height: 60px
+				font-size: 1.9em
+				font-weight: 600
+			span
+				display: flow-root
+				margin-bottom: 30px
+				font-weight: 600
+				color: var(--bluevawe-color)
+		.footer_text
+			padding-left: 40px
+			width: 70%
+			.footer_top_social_logo
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+				.footer_telegram,
+				.footer_instagram
+					padding: 0 40px 0
+				.footer_logotype
+					text-align: right
+			.footer_main_text
+				padding: 40px 40px 0
+				p
+					font-weight: 500
+					margin: 20px 
+	.footer_inform_bottom	
+		margin-top: 30px
+		text-align: center
+		color: var(--main-bg-color)
+@import hidden
