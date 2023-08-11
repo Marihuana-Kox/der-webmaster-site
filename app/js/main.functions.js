@@ -9,14 +9,19 @@ $(function() {
             if(ths.css('opacity') == 1)
                 ths.css('opacity', 0)
         }); 
-    })
+    }) 
     var date = new Date()
     var year = date.getFullYear()
     $('.footer_inform_bottom > b').text(year)
 
     $('a').on('click', function() {
-        let ths = $(this).attr('href')
-        console.log(ths)
-    })
-    
+        let ths = $(this) //.attr('href')
+        $('li').css({'border-bottom': ''})
+        ths.parent().css({'border-bottom': '1px solid var(--light-darkblue-title)'})
+        setTimeout(() => {
+            $('.button-menu-block-activ').fadeOut(600);
+            $('.list-menu-box').animate({'top': '-60%'}, 600);
+            $('.button-menu-block').fadeIn(600);
+        }, 1000)
+    });
 })

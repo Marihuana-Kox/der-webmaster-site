@@ -11,11 +11,15 @@ const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 // $.each(elems, function(index, value){
 //     console.log(index+" : "+value.outerHTML)
 // })
-
+const lifeTime = 1800000
 var x,y
 x = getRandomInt(10)
 y = getRandomInt(10)
 $(":input[name='capcha']").attr('placeholder', x + ' + ' + y + ' = ?')
+if (navigator.cookieEnabled === false){
+	alert("Cookies отключены!");
+    // window.location.reload();
+}
 
 document.getElementById("besthellen_form").addEventListener("submit", function(e) {
     e.preventDefault();
@@ -42,8 +46,12 @@ document.getElementById("besthellen_form").addEventListener("submit", function(e
         message += `<b>Бриф : </b> ${brife} \n`; 
         message += `<b>Форма : </b> Offer \n`;
 
-        sendChat(message)
-        popapBesthellen()
+        if (settimeCoockies(lifeTime)){
+            sendChat(message)
+            popapBesthellen("Ваше предложение принято, ожидайте ответа")
+        }else{
+            noValidText("Ожидайте, вам ответят")
+        }
     }
 
 })
@@ -72,8 +80,12 @@ document.getElementById("footer_beshtellen_form").addEventListener("submit", fun
         message += `<b>Бриф : </b> ${brife} \n`; 
         message += `<b>Форма : </b> Footer \n`; 
 
-        sendChat(message)
-        popapBesthellen()
+        if (settimeCoockies(lifeTime)){
+            sendChat(message)
+            popapBesthellen("Ваше предложение принято, ожидайте ответа")
+        }else{
+            noValidTextFooter("Ожидайте, вам обязательно ответят")
+        }
     }
 
 })
@@ -112,16 +124,16 @@ function sendChat(message) {
     })
 }
 // Сообщение об успешной отпраке заявки и закрывание формы
-function popapBesthellen() {
+function popapBesthellen(mess) {
     $('.wrapper__coner').fadeOut(600)
-    $('.succes_messege').fadeIn(300)
+    $('.succes_messege').fadeIn(300).html(`<span>${ mess }</span>`)
     setTimeout(() => {
         $('.succes_messege').fadeOut(300);
     }, 3000)
 }
 // Выод ошибок валидации сообщений offer
 function noValidText(mess) {
-    $('.error_message').fadeIn(300).html(`<span>${mess}</span>`);
+    $('.error_message').fadeIn(300).html(`<span>${ mess }</span>`);
     setTimeout(() => {
         $('.error_message').fadeOut(300);
     }, 3000);
@@ -134,4 +146,15 @@ function noValidTextFooter(mess) {
         $('.footer_error_message').html(`<span>Попробуйте ещё!</span>`);
     }, 3000);
     
+}
+// Устанвливает интервал между отправкой сообщений
+function settimeCoockies(lifetime){
+    let oldTime = sessionStorage.getItem("lifeTime")
+    let currTime = new Date().getTime();
+    if (oldTime != null && (currTime - oldTime) < lifetime){
+        return false
+    }else{
+        sessionStorage.setItem("lifeTime", currTime)
+        return true
+    }
 }
