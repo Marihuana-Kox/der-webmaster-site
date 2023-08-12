@@ -1,5 +1,4 @@
 @import config
-@import media
 @import fonts
 
 body 
@@ -11,7 +10,7 @@ header
 	background-position: top right, top right
 	background-size: 76vw, 100vw
 	background-repeat: no-repeat, no-repeat, repeat
-	min-height: 100vh
+	max-height: 100vh
 .parallax_layer
 	background-image: url('/images/src/mini-elements.png')
 	background-position: 100% 0
@@ -92,6 +91,8 @@ textarea
 .telegramm-block,
 .instagram-block
 	margin-left: 80px
+	position: relative
+	z-index: 1
 .menu-box
 	height: 60px
 	display: flex
@@ -171,6 +172,7 @@ textarea
 		transition: all .3s ease
 		padding: 5px 20px
 		border-bottom: 1px solid var(--main-bg-color)
+		border-radius: 10px
 		&:hover
 			border-bottom: 1px solid var(--light-darkblue-title)
 			background-color: var(--akcent-orange)
@@ -187,8 +189,10 @@ textarea
 //block_first
 .block_first
 	background-image: url('/images/src/eleps-left.png')
-	background-repeat: no-repeat
+	background-repeat: repeat-x
 	min-height: 100vh
+	background-position: center
+	background-size: contain
 	h2
 		margin-bottom: 60px
 .first__card_block
@@ -290,8 +294,9 @@ textarea
 //block_dritte
 .block_dritte
 	background-image: url('/images/src/eleps-left.png')
-	background-repeat: no-repeat
+	background-repeat: repeat-x
 	min-height: 100vh
+	background-position: center
 	.dritte_card_wrap
 		display: flex
 		margin-bottom: 50px
@@ -310,13 +315,17 @@ textarea
 	background-repeat: no-repeat
 	min-height: 100vh
 	.vierte_blck_wrapper
+		cursor: pointer
 		border-radius: 45px
 		border: 20px solid var(--light-darkblue-title)
 		overflow: hidden
 		max-height: 624px
+		transition: all 0.3s ease
 		img
 			width: 100%
 			object-fit: fill
+		&:hover
+			transform: scale(1.05)
 	.vierte_navigation
 		margin: 100px auto 0
 		display: flex
@@ -402,3 +411,4 @@ textarea
 		text-align: center
 		color: var(--main-bg-color)
 @import hidden
+@import media
