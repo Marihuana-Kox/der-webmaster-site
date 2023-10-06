@@ -37,8 +37,9 @@
         width: 30%
     h1
         font-size: 28px
+    .parallax_layer,
     header
-        background-size: 100vw, 100vw
+        max-height: 720px
     .offer-decription
         p
             font-size: 16px
@@ -55,27 +56,100 @@
             margin: 20px 35px 0
         .chekbox_card
             bottom: 200px
+    .footer_logotype
+        img
+            width: 100%
 // ≥1132px
 @media screen and (max-width: 1132px)    
     .list-menu-box
-        top: -65%
-    header
-        background-size: right bottom, 100vw
-        max-height: auto
+        top: -90%
+    // header
+    //     background-size: right bottom, 100vw
 // ≥992px
 @media screen and (max-width: 992px)
+    header
+        background-size: cover
+        background-position: initial
     h1
         font-size: 24px
     .offer-decription
         p
             font-size: 14px
-    
+    .logo-img
+        min-width: 280px
+        img
+            width: 100%
+    .first__card_block
+        background-size: cover 
+        background-position: center
+        min-height: 94%
+        .title_card
+            font-size: 20px
+            &::after
+                transform: scale(.7)
+                left: -12%
+        .price_card 
+            font-size: 28px
+        .brief_card
+            margin-bottom: 40px
+        .chekbox_card
+            bottom: 40px
+
 // ≥768px
 @media screen and (max-width: 768px)
-    
+    // .container
+    //     max-width: 768px
+    //     margin-left: auto
+    //     margin-right: auto
+    .offer-decription, 
+    .offer-button, 
+    .offer-title
+        text-align: center
+    h1
+        font-size: 2em
+    .offer-decription
+        p
+            font-size: 1.5em
+    .menu-box
+        position: absolute
+        top: -10px
+        right: 20px
+    .list-menu-box
+        width: 40%
+    .monitor-box
+        display: none
+    .logo-img
+        max-width: 260px
+    .instagram-block, 
+    .telegramm-block
+        margin-left: 40px
+    .first__card_block 
+        display: flex
+        flex-direction: column
+        min-height: unset
+        margin-bottom: 60px
+        .title_card
+            font-size: 36px
+            &::after
+                transform: none
+                left: 0
+        .price_card
+            font-size: 58px
+        .brief_card
+            font-size: 20px
+        // .chekbox_card
+        //     bottom: auto
 // ≥576px
 @media screen and (max-width: 576px)
-    
+    .menu-box
+        top: 40px
+    // ≥530px
+@media screen and (max-width: 530px)
+    .list-menu-box
+        width: 70%
+    .parallax_layer,
+    header
+        max-height: 900px
 //*==========  Mobile First  ==========*/
 
 // ≤576px

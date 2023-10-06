@@ -6,7 +6,9 @@ $(function() {
     })
     $('.button-menu-block-activ').on('click', function() {
         $(this).fadeOut(600);
-        $('.list-menu-box').animate({'top': '-60%'}, 600);
+        let obj = $('.list-menu-box')
+        let hg = obj.height();
+        obj.animate({'top': - (hg + 150) + 'px'}, 600);
         $('.button-menu-block').fadeIn(600);
     })
     $('#offer-button').on('click', function() {
