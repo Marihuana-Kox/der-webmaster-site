@@ -63,8 +63,6 @@
 @media screen and (max-width: 1132px)    
     .list-menu-box
         top: -90%
-    // header
-    //     background-size: right bottom, 100vw
 // ≥992px
 @media screen and (max-width: 992px)
     header
@@ -83,24 +81,51 @@
         background-size: cover 
         background-position: center
         min-height: 94%
+        border-radius: 25px
+        border-left: 12px solid var(--light-darkblue-title)
+        border-right: 12px solid var(--light-darkblue-title)
         .title_card
             font-size: 20px
             &::after
                 transform: scale(.7)
-                left: -12%
+                left: -20%
         .price_card 
             font-size: 28px
+            span
+                font-weight: 600
         .brief_card
             margin-bottom: 40px
+            margin: 20px 10px 0
         .chekbox_card
             bottom: 40px
+            .custom_checkbox 
+                width: 30px
+                height: 30px
+                margin-left: 6px
+                .galka
+                    &::after
+                        transform: scale(.5)
+    .fotter 
+        .footer_block_wrapper 
+            .footer_form
+                width: 60%
+            .footer_text
+                width: 40%
+                padding: 0
+                .footer_main_text 
+                    padding: 20px 0 0
+                    p
+                        font-size: 13px
+    .block_vierte 
+        .vierte_blck_wrapper
+            border-width: 10px
+            border-radius: 30px
+        
 
 // ≥768px
 @media screen and (max-width: 768px)
-    // .container
-    //     max-width: 768px
-    //     margin-left: auto
-    //     margin-right: auto
+    p
+        font-size: 20px
     .offer-decription, 
     .offer-button, 
     .offer-title
@@ -128,8 +153,13 @@
         flex-direction: column
         min-height: unset
         margin-bottom: 60px
+        background-position-y: top
+        border-left: none
+        border-right: none
+        border-bottom: 30px solid var(--light-darkblue-title)
         .title_card
             font-size: 36px
+            margin-top: 40px
             &::after
                 transform: none
                 left: 0
@@ -137,13 +167,23 @@
             font-size: 58px
         .brief_card
             font-size: 20px
-        // .chekbox_card
-        //     bottom: auto
+            margin: 20px 40px 0
+        .chekbox_card
+            position: relative
+            .custom_checkbox
+                width: 40px
+                height: 40px
+                margin: 80px 0 0px
+    .block_vierte 
+        .vierte_blck_wrapper
+            margin-bottom: 20px
+            border-radius: 60px
+            border-width: 10px
 // ≥576px
 @media screen and (max-width: 576px)
     .menu-box
         top: 40px
-    // ≥530px
+// ≥530px
 @media screen and (max-width: 530px)
     .list-menu-box
         width: 70%
