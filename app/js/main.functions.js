@@ -1,4 +1,14 @@
 $(function() {
+    if ($(window).width() < 992){
+        var mh = 0;
+        $(".wrap_card_block_zweiten-left, .wrap_card_block_zweiten-right").each(function() {
+            var h_block = parseInt($(this).height());
+            if(h_block > mh) {
+                mh = h_block;
+            };
+            $(".wrap_card_block_zweiten-left, .wrap_card_block_zweiten-right").height(mh)
+        })
+    }
     $('.custom_checkbox').on('click', function() {
         let site = $(this)
         let id = site.attr('id')

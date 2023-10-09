@@ -105,6 +105,18 @@
                 .galka
                     &::after
                         transform: scale(.5)
+    .block_zweiten 
+        .wrap_card_block_zweiten-left,
+        .wrap_card_block_zweiten-right
+            background-size: 100% 100%
+            padding: 0 15px
+            .card-text
+                min-height: 100px
+                padding: 20px 0
+                p
+                    font-size: 15px
+            .icon-card
+                min-width: 95px
     .fotter 
         .footer_block_wrapper 
             .footer_form
@@ -116,6 +128,8 @@
                     padding: 20px 0 0
                     p
                         font-size: 13px
+    .footer_logotype
+        display: none
     .block_vierte 
         .vierte_blck_wrapper
             border-width: 10px
@@ -131,6 +145,8 @@
     .offer-title
         text-align: center
     h1
+        font-size: 2em
+    h2
         font-size: 2em
     .offer-decription
         p
@@ -175,6 +191,13 @@
                 width: 40px
                 height: 40px
                 margin: 80px 0 0px
+    .block_zweiten 
+        .wrap_card_block_zweiten-left,
+        .wrap_card_block_zweiten-right
+            padding: 10px 25px
+            .card-text 
+                p
+                    font-size: 18px
     .block_vierte 
         .vierte_blck_wrapper
             margin-bottom: 20px
@@ -182,6 +205,8 @@
             border-width: 10px
 // ≥576px
 @media screen and (max-width: 576px)
+    .title_block_container
+        padding: 50px 20px
     .menu-box
         top: 40px
     .first__card_block
@@ -190,7 +215,7 @@
         .title_card
             margin-top: 20px
         .price_card
-            font-size: 45px
+            font-size: 45px   
 // ≥530px
 @media screen and (max-width: 530px)
     .list-menu-box
@@ -204,6 +229,13 @@
     .closed__popap
         top: -20px
         left: 42%
+    .fotter 
+        .footer_block_wrapper 
+            .footer_text 
+                .footer_top_social_logo 
+                    .footer_instagram,
+                    .footer_telegram
+                        padding: 0 26px
 
 //*==========  Mobile First  ==========*/
 

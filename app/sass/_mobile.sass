@@ -1,7 +1,16 @@
 // ≥475px
 @media screen and (max-width: 475px)
+    p
+        font-size: 18px
     .logo-title-social-icons
         display: none
+    .logo-title-social-icons-mobile
+        display: flex
+        width: 100%
+        .logo-img
+            margin: 15px
+            img
+                width: 50%
     .parallax_layer
         background-image: none
     .menu-box
@@ -12,6 +21,7 @@
         top: -40px
         background: var(--akcent-orange)
         box-shadow: 0 0 6px var(--hower-darkblue-title)
+        z-index: 1
         .button-menu-block
             background-color: unset
             box-shadow: unset
@@ -35,7 +45,9 @@
             &:first-child
                 top: 14px
     h1
-        font-size: 1.6em
+        font-size: 1.8em
+    .title_block_container
+        padding: 40px 20px
     .offer-button, 
     .offer-decription,
     .offer-title
@@ -44,3 +56,27 @@
     .offer-decription 
         p
             font-size: 1.2em
+    .block_zweiten 
+        .wrap_card_block_zweiten-left, 
+        .wrap_card_block_zweiten-right
+            .card-text 
+                p
+                    font-size: 13px
+    .block_dritte 
+        .drite_icon
+            min-width: 100px
+    .fotter 
+        .footer_inform_bottom
+            font-size: 14px
+        .footer_block_wrapper
+            flex-direction: column
+            .footer_form,
+            .footer_text
+                margin-top: 18px
+                width: 100%
+                .footer_top_social_logo
+                    .footer_telegram,
+                    .footer_instagram
+                        padding: 0 30px 0 0
+            .footer_logotype
+                display: block
