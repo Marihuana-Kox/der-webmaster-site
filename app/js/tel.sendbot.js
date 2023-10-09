@@ -1,7 +1,7 @@
 //npm install axios
-const TOKEN = "5920795656:AAFUpJOmddTnIgp1USZZJsUBeWBcBca9SCI"
-const CHAT_ID = "-1001946139705"
-const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+const TOKEN = "5920795656:AAFUpJOmddTnIgp1USZZJsUBeWBcBca9SCI";
+const CHAT_ID = "-1001946139705";
+const URL = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
 // console.log(navigator.userAgent);
 // Модуль для копирования html кода формы для добавления в другое место
 // const parent = document.querySelector("#besthellen_form");
@@ -11,6 +11,7 @@ const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 // $.each(elems, function(index, value){
 //     console.log(index+" : "+value.outerHTML)
 // })
+
 const lifeTime = 1800000
 var x,y
 x = getRandomInt(10)

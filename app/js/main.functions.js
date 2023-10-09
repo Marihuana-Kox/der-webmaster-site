@@ -2,6 +2,7 @@ $(function() {
     $('.custom_checkbox').on('click', function() {
         let site = $(this)
         let id = site.attr('id')
+        console.log(id)
         $('#select_prd').prop('selectedIndex', id)
         $('.wrapper__coner').fadeIn(600)
         $('.galka').each(function() {

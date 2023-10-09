@@ -17,13 +17,4 @@ $(function() {
     $('.closed__popap').on('click', function() {
         $('.wrapper__coner').fadeOut(600)
     })
-    $('.custom_checkbox').on('click', function() {
-        let ths = $(this)
-        let cssOpacity = ths.children().css('opacity')
-        if (cssOpacity == 0){
-            ths.children().animate({'opacity': 1}, 200)
-        }else{
-            ths.children().animate({'opacity': 0}, 200)
-        }
-    })
 })

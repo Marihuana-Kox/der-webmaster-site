@@ -6,7 +6,7 @@
     header
         background-image: url('/images/src/wave.png'), url('/images/src/main-fone-1-px.jpg')
         background-position: top right, top right
-        background-size: 90vw, 100vw
+        background-size: contain, 100vw
     .offer-decription
         p
             font-size: 20px
@@ -160,6 +160,7 @@
         .title_card
             font-size: 36px
             margin-top: 40px
+            align-self: center
             &::after
                 transform: none
                 left: 0
@@ -183,6 +184,13 @@
 @media screen and (max-width: 576px)
     .menu-box
         top: 40px
+    .first__card_block
+        border-bottom: unset
+        background-size: 100% 100%
+        .title_card
+            margin-top: 20px
+        .price_card
+            font-size: 45px
 // ≥530px
 @media screen and (max-width: 530px)
     .list-menu-box
@@ -190,6 +198,13 @@
     .parallax_layer,
     header
         max-height: 900px
+    .first__card_block 
+        .brief_card 
+            margin: 20px 45px 0
+    .closed__popap
+        top: -20px
+        left: 42%
+
 //*==========  Mobile First  ==========*/
 
 // ≤576px
