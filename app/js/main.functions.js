@@ -12,12 +12,14 @@ $(function() {
     $('.custom_checkbox').on('click', function() {
         let site = $(this)
         let id = site.attr('id')
-        console.log(id)
         $('#select_prd').prop('selectedIndex', id)
         $('.wrapper__coner').fadeIn(600)
         $('.galka').each(function() {
             let ths = $(this)
-            if(ths.css('opacity') == 1)
+            let ths_id = ths.parent('.custom_checkbox').attr('id')
+            if (id == ths_id)  
+                ths.css('opacity', 1)
+            else
                 ths.css('opacity', 0)
         }); 
     }) 
