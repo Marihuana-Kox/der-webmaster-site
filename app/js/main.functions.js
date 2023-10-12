@@ -2,14 +2,17 @@ $(function() {
     if ($(window).width() == 768) {
         $('.hidden_block').removeClass('col-md-6').addClass('col-md-0')
         $('.add_rules').removeClass('col-md-6').addClass('col-md-12')
+        $('.card_first').removeClass('col-md-4').addClass('col-md-12')
     }
     $(window).on('resize', function() {
         if ($(window).width() > 768) {
             $('.add_rules').removeClass('col-md-12').addClass('col-md-6')
             $('.hidden_block').removeClass('col-md-0').addClass('col-md-6')
+            $('.card_first').removeClass('col-md-12').addClass('col-md-4')
         }else{
             $('.hidden_block').removeClass('col-md-6').addClass('col-md-0')
             $('.add_rules').removeClass('col-md-6').addClass('col-md-12')
+            $('.card_first').removeClass('col-md-4').addClass('col-md-12')
         }
     })
     if ($(window).width() < 992){
