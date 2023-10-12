@@ -44,13 +44,12 @@ $(function() {
     $('.footer_inform_bottom > b').text(year)
 
     $('a').on('click', function() {
-        let ths = $(this) //.attr('href')
-        let listHgt = $('.list-menu-box').height() 
+        let ths = $(this)
         $('li').css({'border-bottom': ''})
         ths.parent('li').css({'border-bottom': '1px solid var(--light-darkblue-title)'})
         setTimeout(() => {
             $('.button-menu-block-activ').fadeOut(600);
-            $('.list-menu-box').animate({'top': 20+listHgt+'px'}, 600);
+            $('.list-menu-box').animate({'top': '-105%'}, 600);
             $('.button-menu-block').fadeIn(600);
         }, 500) 
     });
